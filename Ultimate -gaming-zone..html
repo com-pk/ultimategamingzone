@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Custom JPEG Photo Icon -->
+<link rel="icon" type="image/jpeg" href="icon.jpeg">
+
+    <meta name="google-site-verification" content="Eue5-Mf01003siIqmC56jp88sZSKkg8tfL-Kf7CgD18" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate-Gaming-Zone</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #6200ea;
+            padding: 20px;
+            text-align: center;
+        }
+        .container { padding: 15px; }
+        h2 { color: #03dac6; font-size: 1.1rem; border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 25px; }
+        
+        /* Search Box styling */
+        .search-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .search-input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #6200ea;
+            background: #1e1e1e;
+            color: white;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        /* Tabs styling */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tab-btn {
+            background: #1e1e1e;
+            color: white;
+            border: 1px solid #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .tab-btn.active {
+            background: #6200ea;
+            border-color: #03dac6;
+        }
+
+        /* The Grid */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        /* Game Box */
+        .game-box {
+            background: #1e1e1e;
+            width: 30%; /* 3 items per row on mobile */
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            padding: 12px 5px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .game-box:hover { border-color: #03dac6; }
+
+        .game-icon { font-size: 2rem; margin-bottom: 5px; }
+        .game-name { font-size: 0.8rem; font-weight: bold; color: #fff; }
+        .game-desc { font-size: 0.6rem; color: #aaa; margin-top: 4px; padding: 0 2px; }
+
+        /* PC View */
+        @media (min-width: 768px) {
+            .game-box { width: 15%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GAMER HUB</h1>
+    <p>Free Online Mobile & PC Web App Portal</p>
+</header>
+
+<div class="container">
+
+    <!-- Search and Filters -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search games...">
+    </div>
+
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="filterCategory('all')">All</button>
+        <button class="tab-btn" onclick="filterCategory('pc')">PC</button>
+        <button class="tab-btn" onclick="filterCategory('mobile')">Mobile</button>
+    </div>
+
+    <!-- PC Section -->
+    <div id="pc-section">
+        <h2>🖥️ PC CLASSICS (20)</h2>
+        <div class="grid">
+            <a href="https://struckd.com" class="game-box"><div class="game-icon">🏗️</div><div class="game-name">Struckd</div><div class="game-desc">Create and play custom 3D worlds.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🥚</div><div class="game-name">Shell Shock</div><div class="game-desc">Epic multiplayer egg shooter game.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🧱</div><div class="game-name">Bloxd.io</div><div class="game-desc">Minecraft style parkour web game.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🛒</div><div class="game-name">Smash Karts</div><div class="game-desc">3D battle kart racing game arena.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🛠️</div><div class="game-name">BuildNow</div><div class="game-desc">Practice building and shooting online.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🏎️</div><div class="game-name">Drift Hunt</div><div class="game-desc">Realistic physics car drifting simulator.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🔫</div><div class="game-name">Venge.io</div><div class="game-desc">Fast paced FPS multiplayer shooter.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">⚔️</div><div class="game-name">EvoWars</div><div class="game-desc">Fight and evolve your warrior weapon.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🏍️</div><div class="game-name">Moto X3M</div><div class="game-desc">Bike stunt racing with extreme levels.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">📄</div><div class="game-name">Paper.io</div><div class="game-desc">Conquer as much territory as possible.</div></a>
+            <a href="https://krunker.io" class="game-box"><div class="game-icon">🎯</div><div class="game-name">Krunker</div><div class="game-desc">Pixelated fast FPS web shooter.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">💥</div><div class="game-name">Bullet Force</div><div class="game-desc">Advanced team tactical action game.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🏃</div><div class="game-name">G-Switch 3</div><div class="game-desc">Gravity defying physics runner game.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🏹</div><div class="game-name">Archers</div><div class="game-desc">Ragdoll target physics archery fight.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🏎️</div><div class="game-name">Star Car</div><div class="game-desc">Formula racing championship simulation.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🛣️</div><div class="game-name">PolyTrack</div><div class="game-desc">Fast custom track arcade racer.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">☠</div><div class="game-name">Deadshot</div><div class="game-desc">Competitive online browser shooter arena.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🚁</div><div class="game-name">WarBroker</div><div class="game-desc">Open world vehicle military combat.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🎢</div><div class="game-name">Slope</div><div class="game-desc">Speed rolling ball survival game.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🎱</div><div class="game-name">8 Ball</div><div class="game-desc">Classic arcade pool physics game.</div></a>
+        </div>
+    </div>
+
+    <!-- Mobile Section -->
+    <div id="mobile-section">
+        <h2>📱 MOBILE HITS (24)</h2>
+        <div class="grid">
+            <a href="https://poki.com" class="game-box"><div class="game-icon">🏃</div><div class="game-name">Subway Surf</div><div class="game-desc">Run and dodge trains endlessly.</div></a>
+            <a href="https://poki.com" class="game-box"><div class="game-icon">🗿</div><div class="game-name">Temple Run</div><div class="game-desc">Escape from the ancient monster.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🚗</div><div class="game-name">Drive Mad</div><div class="game-desc">Tricky 4x4 car obstacle simulator.</div></a>
+            <a href="https://poki.com" class="game-box"><div class="game-icon">🪝</div><div class="game-name">Stick Hook</div><div class="game-desc">Swing like a physics ninja.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🌀</div><div class="game-name">Helix Jump</div><div class="game-desc">Drop the ball through towers.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🍼</div><div class="game-name">Bottle Flip</div><div class="game-desc">Flip the water bottle online.</div></a>
+            <a href="https://poki.com" class="game-box"><div class="game-icon">🍉</div><div class="game-name">Fruit Ninja</div><div class="game-desc">Slice delicious fruit combo hits.</div></a>
+            <a href="https://poki.com" class="game-box"><div class="game-icon">🎒</div><div class="game-name">Jetpack</div><div class="game-desc">Fly with crazy high tech packs.</div></a>
+            <a href="https://crazygames.com" class="game-box"><div class="game-icon">🎲</div><div class="game-name">Ludo King</div><div class="game-desc">Play classic board game online.</div></a>
+</div>
+    </div>
+
+</div>
+
+<script>
+    // Real-time Search functionality
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        let filter = this.value.toLowerCase();
+        let games = document.querySelectorAll('.game-box');
+
+        games.forEach(game => {
+            let name = game.querySelector('.game-name').innerText.toLowerCase();
+            if (name.includes(filter)) {
+                game.style.display = "flex";
+            } else {
+                game.style.display = "none";
+            }
+        });
+    });
+
+    // Category filter tabs
+    function filterCategory(category) {
+        let pcSec = document.getElementById('pc-section');
+        let mobileSec = document.getElementById('mobile-section');
+        let buttons = document.querySelectorAll('.tab-btn');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        if (category === 'all') {
+            pcSec.style.display = 'block';
+            mobileSec.style.display = 'block';
+        } else if (category === 'pc') {
+            pcSec.style.display = 'block';
+            mobileSec.style.display = 'none';
+        } else if (category === 'mobile') {
+            pcSec.style.display = 'none';
+            mobileSec.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
